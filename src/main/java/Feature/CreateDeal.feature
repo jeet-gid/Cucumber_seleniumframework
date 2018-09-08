@@ -6,7 +6,10 @@ Feature: Create a Deal
     Then User should be loggedin Successfully
     And Page Title shoud be CRMO
     When user creats a deal Entering Deal Information and save the deal
-      | testdeal1 | 1000 | 30 | 50 |
+      | Title     | Amount | Probability | Commision |
+      | testdea1 |   1000 |          30 |        50 |
+      | testdea2 |   2000 |          40 |        60 |
+      | testdea3 |   3000 |          50 |        70 |
     And close the browser
 
     Examples: 

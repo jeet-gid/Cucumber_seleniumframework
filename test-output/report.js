@@ -40,23 +40,50 @@ formatter.step({
   "rows": [
     {
       "cells": [
-        "testdeal1",
+        "Title",
+        "Amount",
+        "Probability",
+        "Commision"
+      ],
+      "line": 9
+    },
+    {
+      "cells": [
+        "testdea1",
         "1000",
         "30",
         "50"
       ],
-      "line": 9
+      "line": 10
+    },
+    {
+      "cells": [
+        "testdea2",
+        "2000",
+        "40",
+        "60"
+      ],
+      "line": 11
+    },
+    {
+      "cells": [
+        "testdea3",
+        "3000",
+        "50",
+        "70"
+      ],
+      "line": 12
     }
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
+  "line": 13,
   "name": "close the browser",
   "keyword": "And "
 });
 formatter.examples({
-  "line": 12,
+  "line": 15,
   "name": "",
   "description": "",
   "id": "create-a-deal;create-a-deal-after-login;",
@@ -66,7 +93,7 @@ formatter.examples({
         "username",
         "password"
       ],
-      "line": 13,
+      "line": 16,
       "id": "create-a-deal;create-a-deal-after-login;;1"
     },
     {
@@ -74,14 +101,14 @@ formatter.examples({
         "rahul_kumar",
         "rahul_kumar"
       ],
-      "line": 14,
+      "line": 17,
       "id": "create-a-deal;create-a-deal-after-login;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 14,
+  "line": 17,
   "name": "Create a Deal after login",
   "description": "",
   "id": "create-a-deal;create-a-deal-after-login;;2",
@@ -118,18 +145,45 @@ formatter.step({
   "rows": [
     {
       "cells": [
-        "testdeal1",
+        "Title",
+        "Amount",
+        "Probability",
+        "Commision"
+      ],
+      "line": 9
+    },
+    {
+      "cells": [
+        "testdea1",
         "1000",
         "30",
         "50"
       ],
-      "line": 9
+      "line": 10
+    },
+    {
+      "cells": [
+        "testdea2",
+        "2000",
+        "40",
+        "60"
+      ],
+      "line": 11
+    },
+    {
+      "cells": [
+        "testdea3",
+        "3000",
+        "50",
+        "70"
+      ],
+      "line": 12
     }
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
+  "line": 13,
   "name": "close the browser",
   "keyword": "And "
 });
@@ -137,7 +191,7 @@ formatter.match({
   "location": "CreateContact.user_is_on_FreeCrm_Login_Page()"
 });
 formatter.result({
-  "duration": 19826156362,
+  "duration": 23741483347,
   "status": "passed"
 });
 formatter.match({
@@ -154,35 +208,35 @@ formatter.match({
   "location": "CreateContact.user_Enter_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 15543740438,
+  "duration": 13503169778,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateContact.user_should_be_loggedin_Successfully()"
 });
 formatter.result({
-  "duration": 41910782,
+  "duration": 27009304,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateContact.page_Title_shoud_be_CRMO()"
 });
 formatter.result({
-  "duration": 12957943,
+  "duration": 12404929,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateContact.user_creats_a_deal_Entering_Deal_Information_and_save_the_deal(DataTable)"
 });
 formatter.result({
-  "duration": 3577108831,
+  "duration": 12728168612,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateContact.close_browser()"
 });
 formatter.result({
-  "duration": 3898891770,
+  "duration": 603758735,
   "status": "passed"
 });
 });

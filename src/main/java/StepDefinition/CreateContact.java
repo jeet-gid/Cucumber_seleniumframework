@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -95,19 +96,42 @@ public class CreateContact {
 //		  Assert.assertEquals(email,  actual_email);
 //	}
 	
+//	@When("^user creats a deal Entering Deal Information and save the deal$")
+//	public void user_creats_a_deal_Entering_Deal_Information_and_save_the_deal(DataTable data){
+//		driver.switchTo().frame("mainpanel");
+//		Actions action=new Actions(driver);
+//	    action.moveToElement(driver.findElement(By.xpath("//a[@title='Deals']"))).build().perform();
+//	    driver.findElement(By.xpath("//a[@title='New Deal']")).click();
+//	    	List<List<String>> dealDate=data.raw();
+//	    driver.findElement(By.id("title")).sendKeys(dealDate.get(0).get(0));
+//	    driver.findElement(By.id("amount")).sendKeys(dealDate.get(0).get(1));
+//	    driver.findElement(By.id("probability")).sendKeys(dealDate.get(0).get(2));
+//	    driver.findElement(By.id("commission")).sendKeys(dealDate.get(0).get(3));
+//		driver.findElement(By.xpath("//table/tbody/tr[1]/td/input[1][@type='submit']")).click();
+//		System.out.println("---Deal Saved----");
+//	}
+	
 	@When("^user creats a deal Entering Deal Information and save the deal$")
 	public void user_creats_a_deal_Entering_Deal_Information_and_save_the_deal(DataTable data){
-		driver.switchTo().frame("mainpanel");
-		Actions action=new Actions(driver);
-	    action.moveToElement(driver.findElement(By.xpath("//a[@title='Deals']"))).build().perform();
-	    driver.findElement(By.xpath("//a[@title='New Deal']")).click();
-	    	List<List<String>> dealDate=data.raw();
-	    driver.findElement(By.id("title")).sendKeys(dealDate.get(0).get(0));
-	    driver.findElement(By.id("amount")).sendKeys(dealDate.get(0).get(1));
-	    driver.findElement(By.id("probability")).sendKeys(dealDate.get(0).get(2));
-	    driver.findElement(By.id("commission")).sendKeys(dealDate.get(0).get(3));
-		driver.findElement(By.xpath("//table/tbody/tr[1]/td/input[1][@type='submit']")).click();
-		System.out.println("---Deal Saved----");
+		
+	    	List<Map<String , String>> dealData=data.asMaps(String.class , String.class);
+	    	
+	    	for(Map<String , String> dealmap : dealData){
+	    		driver.switchTo().frame("mainpanel");
+	    		System.out.println("Entered 2 mainpanel frame");
+	    		Actions action=new Actions(driver);
+	    	    action.moveToElement(driver.findElement(By.xpath("//a[@title='Deals']"))).build().perform();
+	    	    driver.findElement(By.xpath("//a[@title='New Deal']")).click();
+	    		driver.findElement(By.id("title")).sendKeys(dealmap.get("Title"));
+	    		driver.findElement(By.id("amount")).sendKeys(dealmap.get("Amount"));
+	    		driver.findElement(By.id("probability")).sendKeys(dealmap.get("Probability"));
+	    		driver.findElement(By.id("commission")).sendKeys(dealmap.get("Commision"));
+	    		driver.findElement(By.xpath("//table/tbody/tr[1]/td/input[1][@type='submit']")).click();
+	    		System.out.println("---Deal Saved----");
+	    		driver.switchTo().defaultContent();
+				
+	    	}
+	    	driver.switchTo().defaultContent();
 	}
 	
 	@And("^close the browser$")

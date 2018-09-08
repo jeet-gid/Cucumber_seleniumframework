@@ -1,87 +1,100 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/My_Practise/com.freecrm.automation/src/main/java/Features/FreeCrm_LogIn.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/My_Practise/com.freecrm.automation/src/main/java/Feature/CreateDeal.feature");
 formatter.feature({
   "line": 1,
-  "name": "FreeCrm LogIn Feature",
+  "name": "Create a Deal",
   "description": "",
-  "id": "freecrm-login-feature",
+  "id": "create-a-deal",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 2,
-  "name": "Test FreeCrm LogIn with valid Credentials",
+  "line": 3,
+  "name": "Create a Deal after login",
   "description": "",
-  "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials",
+  "id": "create-a-deal;create-a-deal-after-login",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 3,
+  "line": 4,
   "name": "User is on FreeCrm Login Page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 4,
+  "line": 5,
   "name": "User Enter \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "User should be loggedin Successfully",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Page Title shoud be CRMO",
   "keyword": "And "
 });
-formatter.examples({
+formatter.step({
   "line": 8,
+  "name": "user creats a deal Entering Deal Information and save the deal",
+  "rows": [
+    {
+      "cells": [
+        "testdeal1",
+        "1000",
+        "30",
+        "50"
+      ],
+      "line": 9
+    }
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 10,
+  "name": "close the browser",
+  "keyword": "And "
+});
+formatter.examples({
+  "line": 12,
   "name": "",
   "description": "",
-  "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials;",
+  "id": "create-a-deal;create-a-deal-after-login;",
   "rows": [
     {
       "cells": [
         "username",
         "password"
       ],
-      "line": 9,
-      "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials;;1"
+      "line": 13,
+      "id": "create-a-deal;create-a-deal-after-login;;1"
     },
     {
       "cells": [
         "rahul_kumar",
         "rahul_kumar"
       ],
-      "line": 10,
-      "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials;;2"
-    },
-    {
-      "cells": [
-        "naveenk",
-        "test@123"
-      ],
-      "line": 11,
-      "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials;;3"
+      "line": 14,
+      "id": "create-a-deal;create-a-deal-after-login;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 10,
-  "name": "Test FreeCrm LogIn with valid Credentials",
+  "line": 14,
+  "name": "Create a Deal after login",
   "description": "",
-  "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials;;2",
+  "id": "create-a-deal;create-a-deal-after-login;;2",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 3,
+  "line": 4,
   "name": "User is on FreeCrm Login Page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 4,
+  "line": 5,
   "name": "User Enter \"rahul_kumar\" and \"rahul_kumar\"",
   "matchedColumns": [
     0,
@@ -90,20 +103,41 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "User should be loggedin Successfully",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Page Title shoud be CRMO",
   "keyword": "And "
 });
+formatter.step({
+  "line": 8,
+  "name": "user creats a deal Entering Deal Information and save the deal",
+  "rows": [
+    {
+      "cells": [
+        "testdeal1",
+        "1000",
+        "30",
+        "50"
+      ],
+      "line": 9
+    }
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 10,
+  "name": "close the browser",
+  "keyword": "And "
+});
 formatter.match({
-  "location": "FreeCrmLogInSteps.user_is_on_FreeCrm_Login_Page()"
+  "location": "CreateContact.user_is_on_FreeCrm_Login_Page()"
 });
 formatter.result({
-  "duration": 17960774995,
+  "duration": 19826156362,
   "status": "passed"
 });
 formatter.match({
@@ -117,94 +151,38 @@ formatter.match({
       "offset": 30
     }
   ],
-  "location": "FreeCrmLogInSteps.user_Enter_username_and_password(String,String)"
+  "location": "CreateContact.user_Enter_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 15584099379,
+  "duration": 15543740438,
   "status": "passed"
 });
 formatter.match({
-  "location": "FreeCrmLogInSteps.user_should_be_loggedin_Successfully()"
+  "location": "CreateContact.user_should_be_loggedin_Successfully()"
 });
 formatter.result({
-  "duration": 21650467,
+  "duration": 41910782,
   "status": "passed"
 });
 formatter.match({
-  "location": "FreeCrmLogInSteps.page_Title_shoud_be_CRMO()"
+  "location": "CreateContact.page_Title_shoud_be_CRMO()"
 });
 formatter.result({
-  "duration": 758912275,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 11,
-  "name": "Test FreeCrm LogIn with valid Credentials",
-  "description": "",
-  "id": "freecrm-login-feature;test-freecrm-login-with-valid-credentials;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 3,
-  "name": "User is on FreeCrm Login Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 4,
-  "name": "User Enter \"naveenk\" and \"test@123\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 5,
-  "name": "User should be loggedin Successfully",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 6,
-  "name": "Page Title shoud be CRMO",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "FreeCrmLogInSteps.user_is_on_FreeCrm_Login_Page()"
-});
-formatter.result({
-  "duration": 17431011805,
+  "duration": 12957943,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "naveenk",
-      "offset": 12
-    },
-    {
-      "val": "test@123",
-      "offset": 26
-    }
-  ],
-  "location": "FreeCrmLogInSteps.user_Enter_username_and_password(String,String)"
+  "location": "CreateContact.user_creats_a_deal_Entering_Deal_Information_and_save_the_deal(DataTable)"
 });
 formatter.result({
-  "duration": 10949091289,
+  "duration": 3577108831,
   "status": "passed"
 });
 formatter.match({
-  "location": "FreeCrmLogInSteps.user_should_be_loggedin_Successfully()"
+  "location": "CreateContact.close_browser()"
 });
 formatter.result({
-  "duration": 28726563,
-  "status": "passed"
-});
-formatter.match({
-  "location": "FreeCrmLogInSteps.page_Title_shoud_be_CRMO()"
-});
-formatter.result({
-  "duration": 1272239999,
+  "duration": 3898891770,
   "status": "passed"
 });
 });
